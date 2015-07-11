@@ -29,6 +29,16 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        
+//        'request'=>[
+//            'baseUrl'=>'/yii_web/backend/web',
+//        ],
+//        'urlManager'=>[
+//            'scriptUrl'=>'/yii_web/backend/web/index.php',
+////            'scriptUrl'=>'/yii_web/backend/web/index.php',
+//            'enablePrettyUrl' => true,
+//            'showScriptName' => true,
+//        ],
     ],
     'params' => $params,
 ];
