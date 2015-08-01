@@ -9,7 +9,7 @@ use app\models\ArticleSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\web\UploadedFile;
 /**
  * ArticleController implements the CRUD actions for Article model.
  */
@@ -47,7 +47,7 @@ class ArticleController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout = "home";
+        
         $searchModel = new ArticleSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -64,7 +64,7 @@ class ArticleController extends Controller
      */
     public function actionView($id)
     {
-        $this->layout = "home";
+        
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -77,10 +77,15 @@ class ArticleController extends Controller
      */
     public function actionCreate()
     {
-        $this->layout = "home";
+        
         $model = new Article();
 
+        $model->image_upload = UploadedFile::getInstance($model, 'image');
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            
+            //upload image
+            $model->upload(); 
+            
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -97,10 +102,13 @@ class ArticleController extends Controller
      */
     public function actionUpdate($id)
     {
-        $this->layout = "home";
+        
         $model = $this->findModel($id);
 
+        $model->image_upload = UploadedFile::getInstance($model, 'image');
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+             //upload image
+            $model->upload(); 
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
