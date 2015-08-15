@@ -706,6 +706,7 @@ AppAsset::register($this);
 
         <!-- AdminLTE for demo purposes -->
         <script src="js/demo.js" type="text/javascript"></script>
+        <script src="js/custom.js"></script>
     </body>
 </html>
 <?php $this->endPage() ?>
