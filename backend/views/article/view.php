@@ -53,7 +53,6 @@ $this->params['breadcrumbs'][] = $this->title;
                             'title',
                             'alias',
                             'summary:ntext',
-                            'content:ntext',
                             'metakey',
                             'metadesc',
                             'hits',
