@@ -2,6 +2,14 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Url;
+
+$category =  \app\models\Article_Category::find()->all();
+
+$categoryData=ArrayHelper::map($category,'id','title');
+
+$status = array('0' => 'Enable', '1' => 'Disable');
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Article_Category */
@@ -20,23 +28,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'metadesc')->textInput(['maxlength' => 1024]) ?>
 
-    <?= $form->field($model, 'parent_id')->textInput() ?>
-
-    <?= $form->field($model, 'level')->textInput() ?>
+    <?=  $form->field($model, 'parent_id')->dropDownList($categoryData, ['prompt'=>'Please select...']);?>
+    
+   
 
     <?= $form->field($model, 'ordering')->textInput() ?>
 
     <?= $form->field($model, 'hits')->textInput() ?>
 
-    <?= $form->field($model, 'created_by')->textInput() ?>
-
-    <?= $form->field($model, 'created_time')->textInput() ?>
-
-    <?= $form->field($model, 'modified_by')->textInput() ?>
-
-    <?= $form->field($model, 'modified_time')->textInput() ?>
-
-    <?= $form->field($model, 'disable')->textInput() ?>
+    <?=  $form->field($model, 'disable')->dropDownList($status, ['prompt'=>'Please select...']);?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -28,17 +28,18 @@ $status = array('0' => 'Enable', '1' => 'Disable');
     <?=  $form->field($model, 'article_category_id')->dropDownList($categoryData, ['prompt'=>'Please select...']);?>
 
     <?= $form->field($model, 'summary')->widget(CKEditor::className(), [
-        'options' => ['rows' => 5],
+        'options' => ['rows' => 2],
         'preset' => 'basic',
         'clientOptions' => [
             'filebrowserUploadUrl' => Url::to(['ckeditor/upload'])
-        ]
+        ],
+                
     ]) ?>
 
     <?= $form->field($model, 'content')->widget(CKEditor::className(), [
         'options' => ['rows' => 6],
         'clientOptions' => [
-            'filebrowserUploadUrl' => Url::to(['ckeditor/upload'])
+            'filebrowserUploadUrl' => Url::to(['ckeditor/upload2'])
         ]
     ]) ?>
     

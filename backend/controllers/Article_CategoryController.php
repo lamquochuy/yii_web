@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use yii\filters\AccessControl;
 use app\models\Article_Category;
 use app\models\Article_CategorySearch;
 use yii\web\Controller;
@@ -17,6 +18,20 @@ class Article_CategoryController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['login', 'error'],
+                        'allow' => true,
+                    ],
+                    [
+                        'actions' => ['logout', 'index','create','view','update','delete'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -32,7 +47,7 @@ class Article_CategoryController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout = "home";
+//        $this->layout = "home";
         $searchModel = new Article_CategorySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -49,7 +64,7 @@ class Article_CategoryController extends Controller
      */
     public function actionView($id)
     {
-        $this->layout = "home";
+//        $this->layout = "home";
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -62,7 +77,7 @@ class Article_CategoryController extends Controller
      */
     public function actionCreate()
     {
-        $this->layout = "home";
+//        $this->layout = "home";
         $model = new Article_Category();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -82,7 +97,7 @@ class Article_CategoryController extends Controller
      */
     public function actionUpdate($id)
     {
-        $this->layout = "home";
+//        $this->layout = "home";
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

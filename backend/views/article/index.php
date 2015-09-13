@@ -40,6 +40,15 @@ $this->params['breadcrumbs'][] = $this->title;
                         'filterModel' => $searchModel,
                         'columns' => [
                             ['class' => 'yii\grid\SerialColumn'],
+                             [
+                            'attribute' => 'image',
+                            'format' => 'html',
+                            'label' => 'Image',
+                            'value' => function ($data) {
+                                return Html::img('../web/uploads/article/'.$data['image'],
+                                    ['width' => '40px']);
+                            },
+                            ],
                             //'id',
                             'title',
                             'article_category_id',
@@ -56,6 +65,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             // 'created_time',
                              'modified_time',
                             // 'disable',
+                           
                             ['class' => 'yii\grid\ActionColumn'],
                         ],
                     ]);

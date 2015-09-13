@@ -26,7 +26,7 @@ class ArticleController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index','create','view','update','delete'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -102,7 +102,6 @@ class ArticleController extends Controller
      */
     public function actionUpdate($id)
     {
-        
         $model = $this->findModel($id);
 
         $model->image_upload = UploadedFile::getInstance($model, 'image');

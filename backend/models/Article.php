@@ -86,6 +86,7 @@ class Article extends \yii\db\ActiveRecord
         {           
             $this->created_by = 1;
             $this->created_time = date('Y-m-d H:i:s') ;
+            $this->modified_time = date('Y-m-d H:i:s');
         }else{
              $this->modified_time = date('Y-m-d H:i:s');
         }
