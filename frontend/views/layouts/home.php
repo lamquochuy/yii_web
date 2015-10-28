@@ -20,7 +20,7 @@ AppAsset::register($this);
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>JANGO - shared on GFXFree.Net -  - Home Version 4</title>
+<title>Its4e.com - chia sẻ kiến thức lập trình</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -151,73 +151,7 @@ AppAsset::register($this);
 			<!-- BEGIN: HOR NAV -->
 			<!-- BEGIN: LAYOUT/HEADERS/MEGA-MENU -->
 			<!-- BEGIN: MEGA MENU -->
-			<nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-uppercase c-fonts-bold">
-			<!-- BEGIN: MEGA MENU -->
-			<ul class="nav navbar-nav c-theme-nav">
-				<li class="c-active c-menu-type-classic">
-					<a href="index.php?r=home" class="c-link">Home</a>
-				</li>
-				<li class="c-menu-type-classic">
-					<a href="index.php?r=about" class="c-link">About</a>
-				</li>
-				<li>
-					<a href="index.php?r=article" class="c-link dropdown-toggle">PHP Thuần</a>
-					<ul class="dropdown-menu c-menu-type-classic c-pull-left">
-						<li>
-							<a href="index.php?r=article">PHP CƠ BẢN</a>
-						</li>
-						<li>
-							<a href="index.php?r=article">PHP NÂNG CAO</a>
-						</li>
-						
-					</ul>
-				</li>
-				<li class="c-menu-type-classic">
-					<a href="index.php?r=article" class="c-link dropdown-toggle">PHP FRAMEWORK</a>
-					<ul class="dropdown-menu c-menu-type-classic c-pull-left">
-						<li>
-							<a href="index.php?r=article">LARAVEL</a>
-						</li>
-						<li>
-							<a href="index.php?r=article">YII</a>
-						</li>
-						<li>
-							<a href="index.php?r=article">CODEIGNITER</a>
-						</li>
-						
-					</ul>
-				</li>
-                                <li class="c-menu-type-classic">
-					<a href="index.php?r=article" class="c-link dropdown-toggle">WEB DESIGN</a>
-					<ul class="dropdown-menu c-menu-type-classic c-pull-left">
-						<li>
-							<a href="index.php?r=article">LARAVEL</a>
-						</li>
-						<li>
-							<a href="index.php?r=article">YII</a>
-						</li>
-						<li>
-							<a href="index.php?r=article">CODEIGNITER</a>
-						</li>
-						
-					</ul>
-				</li>
-				<li>
-					<a href="index.php?r=contact" class="c-link">CONTACT</a>
-				</li>
-				<li class="c-search-toggler-wrapper">
-					<a href="#" class="c-btn-icon c-search-toggler"><i class="fa fa-search"></i></a>
-				</li>
-				<li class="c-quick-sidebar-toggler-wrapper">
-					<a href="#" class="c-quick-sidebar-toggler">
-					<span class="c-line"></span>
-					<span class="c-line"></span>
-					<span class="c-line"></span>
-					</a>
-				</li>
-			</ul>
-			<!-- END MEGA MENU -->
-			</nav>
+			<?php  require_once ('menu.php'); ?>
 			<!-- END: MEGA MENU -->
 			<!-- END: LAYOUT/HEADERS/MEGA-MENU -->
 			<!-- END: HOR NAV -->
@@ -441,36 +375,7 @@ AppAsset::register($this);
 </div>
 <!-- END: PAGE CONTAINER -->
 <!-- BEGIN: LAYOUT/FOOTERS/FOOTER-5 -->
-<a name="footer"></a>
-<footer class="c-layout-footer c-layout-footer-1">
-<div class="c-postfooter">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-sm-6">
-				<p class="c-copyright c-font-oswald c-font-14">
-					 Copyright &copy; JANGO Inc.
-				</p>
-			</div>
-			<div class="col-md-6 col-sm-6">
-				<ul class="c-socials">
-					<li>
-						<a href="#"><i class="icon-social-twitter"></i></a>
-					</li>
-					<li>
-						<a href="#"><i class="icon-social-facebook"></i></a>
-					</li>
-					<li>
-						<a href="#"><i class="icon-social-youtube"></i></a>
-					</li>
-					<li>
-						<a href="#"><i class="icon-social-dribbble"></i></a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-</footer>a
+<?php echo \Yii::$app->view->renderFile('@app/views/layouts/footer.php'); ?>
 <!-- END: LAYOUT/FOOTERS/FOOTER-5 -->
 <!-- BEGIN: LAYOUT/FOOTERS/GO2TOP -->
 <div class="c-layout-go2top">
