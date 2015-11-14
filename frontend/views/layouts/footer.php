@@ -9,7 +9,7 @@
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-6">
-                    <ul class="c-socials">
+<!--                    <ul class="c-socials">
                         <li>
                             <a href="#"><i class="icon-social-twitter"></i></a>
                         </li>
@@ -22,7 +22,7 @@
                         <li>
                             <a href="#"><i class="icon-social-dribbble"></i></a>
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
             </div>
         </div>

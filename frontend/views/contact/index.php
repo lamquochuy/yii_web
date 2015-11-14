@@ -2,7 +2,7 @@
 <div class="c-layout-breadcrumbs-1 c-fonts-uppercase c-fonts-bold">
     <div class="container">
         <div class="c-page-title c-pull-left">
-            <h3 class="c-font-uppercase c-font-bold">Contact Page 1 - Panaramic Location View</h3>
+            <h3 class="c-font-uppercase c-font-bold">Contact Page</h3>
         </div>
         <ul class="c-page-breadcrumbs c-theme-nav c-pull-right c-fonts-regular">
             <li>
@@ -12,7 +12,7 @@
                 /
             </li>
             <li class="c-state_active">
-                Contact Us 1
+                Contact Us
             </li>
         </ul>
     </div>

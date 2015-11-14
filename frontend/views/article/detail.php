@@ -30,15 +30,7 @@
                             <div class="c-content-media-2-slider" data-slider="owl" data-single-item="true" data-auto-play="4000">
                                 <div class="owl-carousel owl-theme c-theme owl-single">
                                     <div class="item">
-                                        <div class="c-content-media-2" style="background-image: url(img/content/misc/latest-work-3.jpg); min-height: 460px;">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="c-content-media-2" style="background-image: url(img/content/misc/latest-work-7.jpg); min-height: 460px;">
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="c-content-media-2" style="background-image: url(img/content/misc/9.jpg); min-height: 460px;">
+                                        <div class="c-content-media-2" style="background-image: url(img/content/misc/latest-work-3.jpg); height: 260px;">
                                         </div>
                                     </div>
                                 </div>
