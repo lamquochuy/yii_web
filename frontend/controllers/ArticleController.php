@@ -24,9 +24,10 @@ class ArticleController extends \yii\web\Controller {
         ]);
     }
 
-    public function actionDetail() {
+    public function actionDetail($id) {
         $this->layout = "home";
-        return $this->render('detail');
+        $article = Article::find()->where(['id' => $id])->one();
+        return $this->render('detail', ['article' => $article]);
     }
 
 }

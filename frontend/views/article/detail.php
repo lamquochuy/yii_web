@@ -2,7 +2,7 @@
 <div class="c-layout-breadcrumbs-1 c-fonts-uppercase c-fonts-bold c-bordered c-bordered-both">
     <div class="container">
         <div class="c-page-title c-pull-left">
-            <h3 class="c-font-uppercase c-font-bold">Blog Single Post</h3>
+            <h3 class="c-font-uppercase c-font-bold">PHP Thuần</h3>
         </div>
         <ul class="c-page-breadcrumbs c-theme-nav c-pull-right c-fonts-regular">
             <li>
@@ -12,7 +12,7 @@
                 /
             </li>
             <li class="c-state_active">
-                Blog Single Post
+                PHP Thuần
             </li>
         </ul>
     </div>
@@ -30,23 +30,25 @@
                             <div class="c-content-media-2-slider" data-slider="owl" data-single-item="true" data-auto-play="4000">
                                 <div class="owl-carousel owl-theme c-theme owl-single">
                                     <div class="item">
-                                        <div class="c-content-media-2" style="background-image: url(img/content/misc/latest-work-3.jpg); height: 260px;">
+                                        <div class="c-content-media-2" style="background-image: url(../../backend/web/uploads/article/<?php echo $article->image; ?>); height: 260px;">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="c-title c-font-bold c-font-uppercase">
-                            <a href="#">UX Design Conference 2015</a>
+                            <a href="#"><?php echo $article->title; ?></a>
                         </div>
                         <div class="c-panel c-margin-b-30">
                             <div class="c-author">
-                                <a href="#">By <span class="c-font-uppercase">Nick Strong</span></a>
+                                <a href="#">By <span class="c-font-uppercase">ADMIN</span></a>
                             </div>
                             <div class="c-date">
-                                on <span class="c-font-uppercase">20 May 2015, 10:30AM</span>
+                                on <span class="c-font-uppercase"><?php $date = new DateTime($article->created_time);
+    echo $date->format('d M Y, H:iA');
+    ?></span>
                             </div>
-                            <ul class="c-tags c-theme-ul-bg">
+<!--                            <ul class="c-tags c-theme-ul-bg">
                                 <li>
                                     ux
                                 </li>
@@ -59,29 +61,18 @@
                             </ul>
                             <div class="c-comments">
                                 <a href="#"><i class="icon-speech"></i> 30 comments</a>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="c-desc">
-                            <p>
-                                Lorem ipsum dolor sit amet, coectetuer diam ipsum dolor sit amet nonummy coectetuer diam ipsum dolor sit coectetuer adipiscing elit amipiscing elit sit adipiscing consectetuer ipsum dolor sit amipiscing elit sit amet, sit amet, coectetuer adipiscing elit adipiscing consectetuer ipsum dolor sit amet diam nonummy adipiscing elit sit amet, sit ame.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, coectetuer diam ipsum dolor sit amet nonummy coectetuer diam ipsum dolor sit coectetuer adipiscing elit adipiscing consectetuer ipsum dolor sit amipiscing elit sit amet, sit amet, coectetuer adipiscing elit adipiscing consectetuer ipsum dolor sit amet diam nonummy adipiscing elit sit amet, sit ame.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, coectetuer diam ipsum dolor sit amet nonummy coectetuer diam ipsum dolor sit coectetuer adipiscing elit adipiscing const sit amet, sit amet, coectetuer adipiscing elit adipiscing consectetuer ipsum dolor sit amet diam nonummy adipiscing elit sit amet, sit ame.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, coe coectetuer diam ipsum dolor sit coectetuer adipiscing elit adipiscing consectetuer ipsum dolor sit amipiscing elit sit amet, sit amet, coectetuer adipiscing elit adipiscing consectetuer ipsum dolor sit amet diam nonummy adipiscing elit sit amet, sit ame.
-                            </p>
+                            <?php echo $article->content; ?>
                         </div>
                         <div class="c-comments">
-                            <div class="c-content-title-1">
+<!--                            <div class="c-content-title-1">
                                 <h3 class="c-font-uppercase c-font-bold">Comments(30)</h3>
                                 <div class="c-line-left">
                                 </div>
-                            </div>
-                            <div class="c-comment-list">
+                            </div>-->
+<!--                            <div class="c-comment-list">
                                 <div class="media">
                                     <div class="media-left">
                                         <a href="#">
@@ -126,8 +117,8 @@
                                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
                                     </div>
                                 </div>
-                            </div>
-                            <div class="c-content-title-1">
+                            </div>-->
+<!--                            <div class="c-content-title-1">
                                 <h3 class="c-font-uppercase c-font-bold">Leave A Comment</h3>
                                 <div class="c-line-left">
                                 </div>
@@ -148,7 +139,7 @@
                                 <div class="form-group">
                                     <button type="submit" class="btn c-theme-btn c-btn-uppercase btn-md c-btn-sbold btn-block c-btn-square">Submit</button>
                                 </div>
-                            </form>
+                            </form>-->
                         </div>
                     </div>
                 </div>

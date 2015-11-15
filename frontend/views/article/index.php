@@ -49,36 +49,37 @@ use yii\helpers\StringHelper;
                                         </div>
                                     </div>
                                 </div>
-    <?php } ?>
+                            <?php } ?>
                             <div class="c-title c-font-bold c-font-uppercase">
-                                <a href="#"><?php echo $item->title; ?></a>
+                                <a href="index.php?r=article/detail&id=<?php echo $item->id; ?>"><?php echo $item->title; ?></a>
                             </div>
                             <div class="c-desc">
-    <?php echo StringHelper::truncate($item->summary, 350, ''); ?> <a href="#">read more...</a>
+                                <?php echo StringHelper::truncate($item->summary, 350, ''); ?> <a href="#">read more...</a>
                             </div>
                             <div class="c-panel">
                                 <div class="c-author">
                                     <a href="#">By <span class="c-font-uppercase">ADMIN</span></a>
                                 </div>
                                 <div class="c-date">
-                                    on <span class="c-font-uppercase"><?php $date = new DateTime($item->created_time);
-    echo $date->format('d M Y, H:iA');
-    ?></span>
+                                    on <span class="c-font-uppercase"><?php
+                                        $date = new DateTime($item->created_time);
+                                        echo $date->format('d M Y, H:iA');
+                                        ?></span>
                                 </div>
-<!--                                <ul class="c-tags c-theme-ul-bg">
-                                    <li>
-                                        ux
-                                    </li>
-                                    <li>
-                                        marketing
-                                    </li>
-                                    <li>
-                                        events
-                                    </li>
-                                </ul>-->
-<!--                                <div class="c-comments">
-                                    <a href="#"><i class="icon-speech"></i> 30 comments</a>
-                                </div>-->
+                                <!--                                <ul class="c-tags c-theme-ul-bg">
+                                                                    <li>
+                                                                        ux
+                                                                    </li>
+                                                                    <li>
+                                                                        marketing
+                                                                    </li>
+                                                                    <li>
+                                                                        events
+                                                                    </li>
+                                                                </ul>-->
+                                <!--                                <div class="c-comments">
+                                                                    <a href="#"><i class="icon-speech"></i> 30 comments</a>
+                                                                </div>-->
                             </div>
                         </div>
                     <?php } ?>
