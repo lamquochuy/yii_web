@@ -54,7 +54,7 @@ use yii\helpers\StringHelper;
                                 <a href="index.php?r=article/detail&id=<?php echo $item->id; ?>"><?php echo $item->title; ?></a>
                             </div>
                             <div class="c-desc">
-                                <?php echo StringHelper::truncate($item->summary, 350, ''); ?> <a href="#">read more...</a>
+                                <?php echo StringHelper::truncate($item->summary, 350, ''); ?> <a href="index.php?r=article/detail&id=<?php echo $item->id; ?>">read more...</a>
                             </div>
                             <div class="c-panel">
                                 <div class="c-author">
