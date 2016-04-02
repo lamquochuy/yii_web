@@ -14,7 +14,6 @@ class ArticleController extends \yii\web\Controller {
         $query = Article::find()->where(['disable' => 0]);
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount' => $countQuery->count()]);
-         $pages->pageSize=5;
         $models = $query->offset($pages->offset)
                 ->limit($pages->limit)
                 ->all();

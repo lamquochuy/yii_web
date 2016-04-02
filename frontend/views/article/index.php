@@ -37,7 +37,7 @@ use yii\helpers\StringHelper;
                         <div class="c-content-blog-post-1">
                             <?php
                             // kiểm tra nếu image không tồn tại thì không hiển thị lên
-                            if (!empty(trim($item->image))) {
+                            if (!empty($item->image)) {
                                 ?>
                                 <div class="c-media">
                                     <div class="c-content-media-2-slider" data-slider="owl" data-single-item="true" data-auto-play="4000">
@@ -83,14 +83,34 @@ use yii\helpers\StringHelper;
                             </div>
                         </div>
                     <?php } ?>
-                    <div class="c-pagination">
+
                     <?php
                     echo LinkPager::widget([
                         'pagination' => $pages,
                     ]);
                     ?>
-                    </div>
-                                 
+                    <!--                    <div class="c-pagination">
+                                            <ul class="c-content-pagination c-theme">
+                                                <li class="c-prev">
+                                                    <a href="#"><i class="fa fa-angle-left"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">1</a>
+                                                </li>
+                                                <li class="c-active">
+                                                    <a href="#">2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">4</a>
+                                                </li>
+                                                <li class="c-next">
+                                                    <a href="#"><i class="fa fa-angle-right"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>-->
                 </div>
             </div>
             <div class="col-md-3">
